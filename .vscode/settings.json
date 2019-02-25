@@ -1,0 +1,26 @@
+{
+	"files.exclude": {
+		"**/package-lock.json": true,
+        "**/.npmrc": true,
+        ".babelrc": true,
+        ".editorconfig": true,
+        ".eslintrc.json": true,
+        ".eslintrc.js": true,
+        ".gitignore": true,
+        ".jshintrc": true,
+        ".scannerwork": true,
+        ".vscode": true,
+        "coverage": true,
+        "node_modules": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/_ignore_*.*": true
+	},
+	"editor.tabSize": 4,
+	"files.eol": "\r\n",
+	"files.encoding": "utf8",
+	"files.insertFinalNewline": false,
+	"files.trimTrailingWhitespace": true,
+	"files.trimFinalNewlines": false
+}

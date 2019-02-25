@@ -1,0 +1,39 @@
+{
+  "name": "@dx-libs/timeout",
+  "version": "0.1.0",
+  "description": "Yet another setTimeout wrapper function, but async.",
+  "author": "dx Team <team@daax.com.ar\n>",
+  "scripts": {
+    "eslint": "eslint src/**.js",
+    "test-watch": "jest ./test/*.test.js --collectCoverageFrom=./src/**.js --coverage --watchPathIgnorePatterns=.*\\.sonar.* --watchAll ",
+    "test": "jest ./test --collectCoverageFrom=./src/**.js --coverage",
+    "sonar": "sonar-scanner -Dsonar.projectKey=dx-libstimeout -Dsonar.sourceEncoding=UTF-8 -Dsonar.host.url=http://sonarqube:9000 -Dsonar.sources=./src -Dsonar.language=js -Dsonar.exclusions=**.test.js -Dsonar.tests=./test -Dsonar.test.inclusions=./test/**.test.js"
+  },
+  "main": "src/index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-plugin-jest": "^22.3.0",
+    "jest": "^24.0.0",
+    "sinon": "^7.2.3"
+  },
+  "dependencies": {
+    "daax-console": "^0.4.1",
+    "debug": "^4.1.1"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dx-libs/timeout.git"
+  },
+  "keywords": [
+    "setTimeout",
+    "async",
+    "timeout"
+  ],
+  "bugs": {
+    "url": "https://github.com/dx-libs/timeout/issues"
+  },
+  "homepage": "https://github.com/dx-libs/timeout#readme"
+}
