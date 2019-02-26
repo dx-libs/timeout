@@ -8,7 +8,6 @@ test('dx-libs/timeout', async () => {
     expect(fnSpy.called).toBe(false);
 
     await prom;
-
     expect(fnSpy.called).toBe(true);
 });
 
@@ -22,4 +21,16 @@ test('dx-libs/timeout cancel', async () => {
     await prom;
 
     expect(fnSpy.notCalled).toBe(true);
+
+});
+
+// TODO: Rehacer
+test('dx-libs/timeout wait', async () => {
+    const ms = 1000;
+    const time = process.hrtime();
+    await timeout(ms);
+    const hrtime = process.hrtime(time);
+    const milliseconds = ((hrtime[0] * 1e9) + hrtime[1]) / 1e6;
+
+    expect(Math.floor(milliseconds)).toBe(ms);
 });

@@ -1,9 +1,12 @@
 'use strict';
 
-const timeout = (fn, timeout) => {
+const timeout = (func, timeoutInMilliseconds) => {
     const wrapper = {
         cancel: () => {}
     };
+
+    const fn = typeof func === 'number' && timeoutInMilliseconds === undefined ? () => true : func;
+    const timeout = typeof func === 'number' && timeoutInMilliseconds === undefined ? func : timeoutInMilliseconds;
 
     const prom = new Promise((resolve) => {
         const id = setTimeout(() => resolve(fn()), timeout);
